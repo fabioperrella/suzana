@@ -23,31 +23,25 @@ meses = [0, 4, 12, 14];
 // bascara(1, 10, 2)
 
 function has31days(mes){
-  isValidMonth = true;
-
-  // console.log('mes que foi recebido pela funcao: ' + mes);
-
   if(mes < 1){
     console.log('mes tem que ser maior que 1');
-    isValidMonth = false;
+    return;
   }
 
   if(mes > 12){
     console.log('mes tem que ser menor que 12');
-    isValidMonth = false;
+    return;
   }
 
-  if(isValidMonth == true){
-    mesesCom31Dias = [1, 3, 5, 7, 8, 12]
-    mesesComMenosDias = [2, 4, 6, 9, 11]
+  mesesCom31Dias = [1, 3, 5, 7, 8, 12]
+  mesesComMenosDias = [2, 4, 6, 9, 11]
 
-    if(mesesCom31Dias.includes(mes)){
-      console.log('sim');
-    }
+  if(mesesCom31Dias.includes(mes)){
+    console.log('sim');
+  }
 
-    if(mesesComMenosDias.includes(mes)){
-      console.log('nao');
-    }
+  if(mesesComMenosDias.includes(mes)){
+    console.log('nao');
   }
 }
 
