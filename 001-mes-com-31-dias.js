@@ -12,7 +12,7 @@
 // mes12 = 12;
 
 // meses = [1,2,3,4,5,6,7,8,9,10,11,12];
-meses = [0, 4, 12, 14];
+const meses = [0, 4, 12, 14];
 // meses = [ 'jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez' ];
 // meses[0]
 
@@ -21,6 +21,9 @@ meses = [0, 4, 12, 14];
 //   console.log(x)
 // }
 // bascara(1, 10, 2)
+
+const mesesCom31Dias = [1, 3, 5, 7, 8, 12];
+const mesesComMenosDias = [2, 4, 6, 9, 11];
 
 function has31days(mes){
   if(mes < 1){
@@ -32,9 +35,6 @@ function has31days(mes){
     console.log('mes tem que ser menor que 12');
     return;
   }
-
-  mesesCom31Dias = [1, 3, 5, 7, 8, 12]
-  mesesComMenosDias = [2, 4, 6, 9, 11]
 
   if(mesesCom31Dias.includes(mes)){
     console.log('sim');
@@ -49,17 +49,20 @@ function has31days(mes){
 // has31days(mes2);
 // has31days(mes3);
 
-for(contador = 0; contador < meses.length ; contador = contador + 1){
+for(
+  let contador = 0; // codigo que roda antes de começar o loop
+  contador < meses.length; // condicao de parada do loop
+  contador = contador + 1 // o que executa no final de cada iteracao
+){
   console.log('contador: ' + contador);
 
-  mesQueFoiPego = meses[contador];
+  const mesQueFoiPego = meses[contador];
   console.log('  mes: ' + mesQueFoiPego)
   // chamar / executar uma funcao
   has31days(mesQueFoiPego);
 
   // has31days(meses[contador]);
 }
-
 
 // function teste(lala){
 //   console.log('o valor de lala eh: ' + lala);
